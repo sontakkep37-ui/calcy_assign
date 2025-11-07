@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body >
+    <form style="border: 1px solid black; width: 200px;text-align: center; background-color: lightgrey">
+        <input type="text" id="screen">
+        <br>
+        <input type="button" value="1" onclick="result('1')">
+        <input type="button" value="2" onclick="result('2')">
+        <input type="button" value="3" onclick="result('3')">
+        <br>
+        <input type="button" value="4" onclick="result('4')">
+        <input type="button" value="5" onclick="result('5')">
+        <input type="button" value="6" onclick="result('6')">
+        <br>
+        <input type="button" value="7" onclick="result('7')">
+        <input type="button" value="8" onclick="result('8')">
+        <input type="button" value="9" onclick="result('9')">
+        <br>
+        <input type="button" value="+" onclick="result('+')">
+        <input type="button" value="0" onclick="result('0')">
+        <input type="button" value="-" onclick="result('-')">
+        <br>
+        <input type="button" value="/" onclick="result('/')">
+        <input type="button" value="*" onclick="result('*')">
+        <input type="button" value="%" onclick="result('%')">
+        <br>
+        <input type="reset" value="clear">
+        <input type="button" value="=" onclick="result2('=')">
+        
+    </form>
+    <script>
+        const result = (num) => {
+            document.getElementById("screen").value += num
+        }
+        const result2 = () => {
+            document.getElementById("screen").value = eval(document.getElementById("screen").value)
+        }
+
+    </script>
+</body>
+
+</html>
